@@ -1,0 +1,6 @@
+PATH="$PATH:$HOME/me/bin"
+
+# Alias 
+alias firefox="firefox </dev/null >/dev/null 2>&1"
+alias chrome="google-chrome-stable </dev/null >/dev/null 2>&1"
+alias system-update="apt-get update -y && apt-get upgrade -y && apt autoremove -y"
