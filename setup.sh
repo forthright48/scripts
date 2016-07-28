@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # A shell script to install softwares automatically
-# Run the script as root
+# Run the script as root by typing: sudo sh setup.sh
 
 # 0. First go to home
 cd ~
@@ -20,6 +20,7 @@ rm google-chrome*.deb
 mkdir -p .fonts # -p in case .fonts is already there
 cd .fonts
 wget files.ekushey.org/Ekushey_OpenType_Bangla_Fonts/SolaimanLipi_Bold_10-03-12.ttf
+fc-cache -f -v
 cd ~
 
 # 4. Install Atom
@@ -37,3 +38,13 @@ apt-get install oracle-java8-set-default -y
 
 # 6. Install other useful packages
 apt-get install -y git vim npm
+
+# 7. Install NodeJS
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+apt-get install -y nodejs
+
+# Install some essential node packages
+npm install -g nodemon
+
+# Last Step
+apt-get autoremove
