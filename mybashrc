@@ -4,4 +4,7 @@ PATH="$PATH:$HOME/me/bin"
 # Alias
 alias firefox="firefox </dev/null >/dev/null 2>&1"
 alias chrome="google-chrome-stable </dev/null >/dev/null 2>&1"
-alias system-update="apt-get update -y && apt-get upgrade -y && apt autoremove -y"
+alias system-update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get autoremove -y"
+
+# Clear Command Line
+clear
