@@ -46,5 +46,9 @@ apt-get install -y nodejs
 # Install some essential node packages
 npm install -g nodemon
 
+# 8. Install restricted extras (for mp3 and stuff)
+apt-get install ubuntu-restricted-extras
+
+
 # Last Step
 apt-get autoremove
