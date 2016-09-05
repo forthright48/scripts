@@ -29,7 +29,7 @@ apt-get update -y
 apt-get install atom -y
 
 # Now install all required packages
-apm install atom-beautify hightlight-selected linter linter-csslint linter-eslint linter-flake8 markdown-preview-plus minimap pigments todo-show linter-pug
+apm install atom-beautify hightlight-selected linter linter-csslint linter-eslint linter-flake8 markdown-preview-plus minimap pigments todo-show linter-pug filesize
 
 # 5. Install Java-8
 add-apt-repository ppa:webupd8team/java
@@ -45,6 +45,10 @@ apt-get install -y nodejs
 
 # Install some essential node packages
 npm install -g nodemon
+
+# 8. Install restricted extras (for mp3 and stuff)
+apt-get install ubuntu-restricted-extras
+
 
 # Last Step
 apt-get autoremove
