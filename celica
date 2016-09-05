@@ -1,0 +1,13 @@
+cd /home/forthright48/me/dsc-cassandra-2.2.4
+./bin/cassandra &
+sleep 40
+
+cd /home/forthright48/me/kafka
+./bin/zookeeper-server-start.sh config/zookeeper.properties &
+sleep 40
+./bin/kafka-server-start.sh config/server.properties &
+sleep 40
+./bin/create-topic.sh &
+sleep 40
+
+redis-server &
