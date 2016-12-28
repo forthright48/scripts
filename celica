@@ -2,7 +2,7 @@ port-free 7000
 port-free 2181
 port-free 6379
 
-cd /home/forthright48/me/dsc-cassandra-2.2.4
+cd /home/forthright48/me/apache-cassandra-3.7
 ./bin/cassandra &
 sleep 40
 

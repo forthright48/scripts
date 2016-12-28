@@ -11,10 +11,13 @@ apt-get update -y
 apt-get upgrade -y
 
 # 2. Install Chrome
+cd ~/tmp
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome*.deb
 apt-get install -f # For dependencies
-rm google-chrome*.deb
+dpkg -i google-chrome*.deb # Try again
+apt-get install -f # Just in case
+cd ~
 
 # 3. Bangla Fonts
 mkdir -p .fonts # -p in case .fonts is already there
@@ -27,9 +30,10 @@ cd ~
 add-apt-repository ppa:webupd8team/atom
 apt-get update -y
 apt-get install atom -y
+chown -R forthright48:forthright48 .atom
 
 # Now install all required packages
-apm install atom-beautify hightlight-selected linter linter-csslint linter-eslint linter-flake8 markdown-preview-plus minimap pigments todo-show linter-pug filesize
+apm install atom-beautify highlight-selected linter linter-csslint linter-eslint linter-flake8 markdown-preview-plus minimap pigments todo-show linter-pug filesize
 
 # 5. Install Java-8
 add-apt-repository ppa:webupd8team/java
@@ -37,7 +41,7 @@ apt-get update
 apt-get install oracle-java8-set-default -y
 
 # 6. Install other useful packages
-apt-get install -y git vim npm
+apt-get install -y git vim npm curl geany
 
 # 7. Install NodeJS
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
@@ -49,6 +53,11 @@ npm install -g nodemon
 # 8. Install restricted extras (for mp3 and stuff)
 apt-get install ubuntu-restricted-extras
 
+# 9. Installing ibus-avro on Ubuntu 14.04
+add-apt-repository "deb http://download.opensuse.org/repositories/home:/sarimkhan/xUbuntu_14.04/ ./"
+wget -q http://download.opensuse.org/repositories/home:/sarimkhan/xUbuntu_14.04/Release.key -O- | apt-key add -
+apt-get update
+apt-get install ibus-avro-trusty
 
 # Last Step
 apt-get autoremove
