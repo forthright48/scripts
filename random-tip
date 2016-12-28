@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+
+# displays random tips and tricks from a file
+
+import subprocess, os, sys, random
+from os import path
+
+
+filepath = "/home/forthright48/me/bin/random-tip.txt"
+
+if path.exists(filepath) == False:
+	sys.exit("random-tip.txt not found")
+
+## Using shuf
+# check_ouput takes in array for some reason
+# also, it returns byte of string
+# line = subprocess.check_output(["shuf", "-n", "1", filepath]).decode("utf-8")
+
+## Using python
+fileObj = open(filepath)
+line = random.choice( [ line.strip() for line in fileObj if line.strip() != "" and line.strip().startswith("#") == False] )
+
+subprocess.call("cowsay " + repr(line), shell=True)

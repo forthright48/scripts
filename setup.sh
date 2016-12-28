@@ -65,5 +65,8 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2
 apt-get update
 apt-get install sbt
 
+# 11. Python
+apt-get install python3-flake8
+
 # Last Step
 apt-get autoremove

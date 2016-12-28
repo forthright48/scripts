@@ -12,7 +12,7 @@ from os import path
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument("fileExt", help="extension of file which to be extracted", choices=["tar.gz","tgz"])
+parser.add_argument("fileExt", help="extension of file which to be extracted", choices=["tar.gz","tgz","zip"])
 parser.add_argument("filePath", help="file path that to be extracted") 
 
 
@@ -30,4 +30,5 @@ if filePath.endswith(args.fileExt) == False:
 
 if args.fileExt in ["tar.gz","tgz"]:
 	subprocess.call("tar -xvzf " + filePath, shell=True)
-
+elif args.fileExt == "zip":
+	subprocess.call("unzip " + filePath, shell=True)

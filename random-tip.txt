@@ -1,0 +1,5 @@
+# Linux Tips
+
+Linux Tips: 'cd -' takes you to previous directory
+
+# Python Tips
