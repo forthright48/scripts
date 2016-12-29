@@ -33,7 +33,7 @@ apt-get install atom -y
 chown -R forthright48:forthright48 .atom
 
 # Now install all required packages
-apm install atom-beautify highlight-selected linter linter-csslint linter-eslint linter-flake8 markdown-preview-plus minimap pigments todo-show linter-pug filesize
+apm install atom-beautify highlight-selected linter linter-csslint linter-eslint linter-flake8 markdown-preview-plus minimap pigments todo-show linter-pug filesize language-scala
 
 # 5. Install Java-8
 add-apt-repository ppa:webupd8team/java
@@ -41,7 +41,7 @@ apt-get update
 apt-get install oracle-java8-set-default -y
 
 # 6. Install other useful packages
-apt-get install -y git vim npm curl geany
+apt-get install -y git vim npm curl geany htop
 
 # 7. Install NodeJS
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -

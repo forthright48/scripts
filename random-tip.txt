@@ -2,4 +2,6 @@
 
 Linux Tips: 'cd -' takes you to previous directory
 
+Linux Tips: "htop" package displays overview of all processes running on system
+
 # Python Tips
