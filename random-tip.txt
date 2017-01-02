@@ -1,7 +1,15 @@
-# Linux Tips
+// Number of Tips 4
 
-Linux Tips: 'cd -' takes you to previous directory
+// Linux Tips
 
-Linux Tips: "htop" package displays overview of all processes running on system
+#1 Linux Tips: 'cd -' takes you to previous directory.
 
-# Python Tips
+#2 Linux Tips: "htop" package displays overview of all processes running on system.
+
+#3 Linux Tips: "apropos <keyword>" command will display all commands where the keywords appear in their short descriptions. For example, "apropos mount".
+
+#4 Linux Tips: "less" is a program to view file contents. It allows both backward and forward movement. Also, less does not have to read the entire input file before starting, so with large input files it starts up faster than text editors like vi.
+
+#5 Linux Tips: While viewing files with "less", use `ctrl + f` to go down one screen and `ctrl + b` to go up one screen. For half screen movement use `ctrl + d` and `ctrl + u`. For line movement use `j` and `k` or arrow keys.
+
+#6 Linux Tips: You can view archived or compressed files (tar,tar.gz,tgz,zip) files using "less".

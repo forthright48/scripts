@@ -13,18 +13,17 @@ from os import path
 parser = argparse.ArgumentParser()
 
 parser.add_argument("fileExt", help="extension of file which to be extracted", choices=["tar.gz","tgz","zip"])
-parser.add_argument("filePath", help="file path that to be extracted") 
-
+parser.add_argument("filePath", help="file path that to be extracted")
 
 args = parser.parse_args()
 
-currentDir = os.getcwd(); # Get where script was executed
-filePath = path.join(currentDir,args.filePath) # Get file path
-filePath = path.abspath(filePath) # Normalize it
+currentDir = os.getcwd()  # Get where script was executed
+filePath = path.join(currentDir, args.filePath)  # Get file path
+filePath = path.abspath(filePath)  # Normalize it
 
 if path.isfile(filePath) == False:
 	sys.exit("No such file to extract") # No such file
-	
+
 if filePath.endswith(args.fileExt) == False:
 	sys.exit("Extension doesn't match") # Extension mismatch
 

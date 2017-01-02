@@ -30,6 +30,7 @@ cd ~
 add-apt-repository ppa:webupd8team/atom
 apt-get update -y
 apt-get install atom -y
+# since the script is running in sudo, need to change it back to user
 chown -R forthright48:forthright48 .atom
 
 # Now install all required packages
@@ -41,7 +42,7 @@ apt-get update
 apt-get install oracle-java8-set-default -y
 
 # 6. Install other useful packages
-apt-get install -y git vim npm curl geany htop
+apt-get install -y git vim npm curl geany htop cowsay
 
 # 7. Install NodeJS
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
@@ -66,7 +67,7 @@ apt-get update
 apt-get install sbt
 
 # 11. Python
-apt-get install python3-flake8
+apt-get install python3-flake8 ipython3-notebook idle3
 
 # Last Step
 apt-get autoremove

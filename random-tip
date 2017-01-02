@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 
-# displays random tips and tricks from a file
+# Displays random tips and tricks from a file
+# Todo: Add feature to filter type of tips one wants to see, e.g, not everyone
+# 	is interested in scala tips.
 
-import subprocess, os, sys, random
+import subprocess
+import sys
+import random
 from os import path
 
 
 filepath = "/home/forthright48/me/bin/random-tip.txt"
 
-if path.exists(filepath) == False:
-	sys.exit("random-tip.txt not found")
+if path.exists(filepath) is False:
+    sys.exit("random-tip.txt not found")
 
 ## Using shuf
 # check_ouput takes in array for some reason
@@ -18,6 +22,6 @@ if path.exists(filepath) == False:
 
 ## Using python
 fileObj = open(filepath)
-line = random.choice( [ line.strip() for line in fileObj if line.strip() != "" and line.strip().startswith("#") == False] )
+line = random.choice([line.strip() for line in fileObj if line.strip() != "" and line.strip().startswith("//") is False])
 
 subprocess.call("cowsay " + repr(line), shell=True)
