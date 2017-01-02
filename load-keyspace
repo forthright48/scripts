@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# There as a script file in a certain folder that I need to run most of the time
+# Annoying thing is, I have to be in that directory before calling it
+
+cd /home/forthright48/me/work/al-engine/project
+./load-keyspace.sh
+cd -

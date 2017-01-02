@@ -7,5 +7,9 @@ PATH="$PATH:$HOME/me/bin:$SCALA_HOME/bin:$IDEA_HOME/bin"
 alias firefox="firefox </dev/null >/dev/null 2>&1"
 alias chrome="google-chrome-stable </dev/null >/dev/null 2>&1"
 alias system-update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get autoremove -y"
+alias bashSource="source ~/.bashrc"
+
+# Frequently visited paths
+. ~/me/bin/fvp
 
 random-tip

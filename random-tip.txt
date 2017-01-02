@@ -13,3 +13,5 @@
 #5 Linux Tips: While viewing files with "less", use `ctrl + f` to go down one screen and `ctrl + b` to go up one screen. For half screen movement use `ctrl + d` and `ctrl + u`. For line movement use `j` and `k` or arrow keys.
 
 #6 Linux Tips: You can view archived or compressed files (tar,tar.gz,tgz,zip) files using "less".
+
+#7 Linux Tips: In "less", you can match words using "/<text>" for forward match and "?<text>" for backward match. For next match "n" and for previous match "N".
