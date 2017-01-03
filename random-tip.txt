@@ -15,3 +15,7 @@
 #6 Linux Tips: You can view archived or compressed files (tar,tar.gz,tgz,zip) files using "less".
 
 #7 Linux Tips: In "less", you can match words using "/<text>" for forward match and "?<text>" for backward match. For next match "n" and for previous match "N".
+
+#8 Linux Tips: "route" command will display kernel ip routing table. You can figure out your network gateway address from there, i.e, your router's address.
+
+#9 Linux Tips: You can use "nmap -sn <ip-address/mask>" to find out who are connected to your network and what is their ip address.
