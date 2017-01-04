@@ -1,7 +1,11 @@
 # I generally keep all my scripts in ~/me/bin. So I need to add the path to PATH.
 
-SCALA_HOME="/home/forthright48/me/scala"
-PATH="$PATH:$HOME/me/bin:$SCALA_HOME/bin:$IDEA_HOME/bin"
+# Add path
+MY_BIN="$HOME/me/bin"
+SCALA="/home/forthright48/me/scala/bin"
+NPM_GLOBAL="/home/forthright48/.npm-global/bin"
+
+PATH="$PATH:$MY_BIN:$SCALA:$NPM_GLOBAL"
 
 # Alias
 alias firefox="firefox </dev/null >/dev/null 2>&1"

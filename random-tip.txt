@@ -1,4 +1,4 @@
-// Number of Tips 4
+// Number of Tips 8
 
 // Linux Tips
 
@@ -19,3 +19,7 @@
 #8 Linux Tips: "route" command will display kernel ip routing table. You can figure out your network gateway address from there, i.e, your router's address.
 
 #9 Linux Tips: You can use "nmap -sn <ip-address/mask>" to find out who are connected to your network and what is their ip address.
+
+#10 Linux Tips: If you want to run a command as a different user, you can use "su" for that: "su - <user-name> -c '<command>'"
+
+#11 Linux Tips: You can display one-line manual page descriptions using "whatis <command-name>"

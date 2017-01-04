@@ -46,15 +46,20 @@ apt-get install -y python3-flake8 ipython3-notebook idle3 python3-pip
 su - forthright48 -c "pip3 install --user numpy pandas"
 
 # 6. Install other useful packages
-apt-get install -y git vim npm curl geany htop cowsay
+apt-get install -y git vim curl geany htop cowsay
 
 # 7. Install NodeJS
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 apt-get update -y
 apt-get install -y nodejs
 
+# Fix npm permission
+su - forthright48 -c "mkdir ~/.npm-global"
+su - forthright48 -c "npm config set prefix '~/.npm-global'"  #Don't forget to update path
+
 # Install some essential node packages
-npm install -gy nodemon
+su - forthright48 -c "npm install npm@latest -g"
+su - forthright48 -c "npm install -g nodemon gulpjs/gulp-cli"
 
 # 8. Install restricted extras (for mp3 and stuff)
 apt-get install -y ubuntu-restricted-extras
