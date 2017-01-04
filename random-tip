@@ -7,6 +7,7 @@
 import subprocess
 import sys
 import random
+from shlex import quote
 from os import path
 
 
@@ -24,4 +25,4 @@ if path.exists(filepath) is False:
 fileObj = open(filepath)
 line = random.choice([line.strip() for line in fileObj if line.strip() != "" and line.strip().startswith("//") is False])
 
-subprocess.call("cowsay " + repr(line), shell=True)
+subprocess.call("cowsay {}".format(quote(line)), shell=True)

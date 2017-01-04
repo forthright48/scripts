@@ -1,4 +1,4 @@
-// Number of Tips 8
+// Number of Tips 12
 
 // Linux Tips
 
@@ -23,3 +23,7 @@
 #10 Linux Tips: If you want to run a command as a different user, you can use "su" for that: "su - <user-name> -c '<command>'"
 
 #11 Linux Tips: You can display one-line manual page descriptions using "whatis <command-name>"
+
+// Python Tips
+
+# 12 Python Tips: If you need to run a shell command from python that takes a string input like "<command> <string-parameter>", make sure to use shlex.quote() to safely quote the string parameter and make it shell compatible. 
