@@ -30,6 +30,8 @@
 
 #15 Linux Tips: You can use "spd-say <text>" command for text-to-speech service.
 
+#16 Linux Tips: You can count number of lines in a file with "wc -n <file>"
+
 // Python Tips
 
 # 12 Python Tips: If you need to run a shell command from python that takes a string input like "<command> <string-parameter>", make sure to use shlex.quote() to safely quote the string parameter and make it shell compatible.

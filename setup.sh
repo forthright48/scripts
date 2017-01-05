@@ -42,8 +42,8 @@ apt-get update -y
 apt-get install oracle-java8-set-default -y
 
 # 5. Python
-apt-get install -y python3-flake8 ipython3-notebook idle3 python3-pip
-su - forthright48 -c "pip3 install --user numpy pandas"
+apt-get install -y python3-flake8 ipython3-notebook idle3 python3-pip libpng-dev libfreetype6-dev
+su - forthright48 -c "pip3 install --user numpy pandas matplotlib requests"
 
 # 6. Install other useful packages
 apt-get install -y git vim curl geany htop cowsay
