@@ -24,6 +24,12 @@
 
 #11 Linux Tips: You can display one-line manual page descriptions using "whatis <command-name>"
 
+#13 Linux Tips: You can set nicknames to ip address's in /etc/hosts
+
+#14 Linux Tips: Find out list of open ports of an ip using "nmap --open <ip>"
+
+#15 Linux Tips: You can use "spd-say <text>" command for text-to-speech service.
+
 // Python Tips
 
-# 12 Python Tips: If you need to run a shell command from python that takes a string input like "<command> <string-parameter>", make sure to use shlex.quote() to safely quote the string parameter and make it shell compatible. 
+# 12 Python Tips: If you need to run a shell command from python that takes a string input like "<command> <string-parameter>", make sure to use shlex.quote() to safely quote the string parameter and make it shell compatible.
