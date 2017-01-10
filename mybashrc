@@ -4,8 +4,9 @@
 MY_BIN="$HOME/me/bin"
 SCALA="/home/forthright48/me/scala/bin"
 NPM_GLOBAL="/home/forthright48/.npm-global/bin"
+IDEA="/home/forthright48/me/idea/bin"
 
-PATH="$PATH:$MY_BIN:$SCALA:$NPM_GLOBAL"
+PATH="$PATH:$MY_BIN:$SCALA:$NPM_GLOBAL:$IDEA"
 
 # Alias
 alias firefox="firefox </dev/null >/dev/null 2>&1"
@@ -15,5 +16,14 @@ alias bashSource="source ~/.bashrc"
 
 # Frequently visited paths
 . ~/me/bin/fvp
+
+# function to set terminal title
+function set-title(){
+  if [[ -z "$ORIG" ]]; then
+    ORIG=$PS1
+  fi
+  TITLE="\[\e]2;$*\a\]"
+  PS1=${ORIG}${TITLE}
+}
 
 random-tip

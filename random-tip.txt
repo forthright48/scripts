@@ -30,7 +30,7 @@
 
 #15 Linux Tips: You can use "spd-say <text>" command for text-to-speech service.
 
-#16 Linux Tips: You can count number of lines in a file with "wc -n <file>"
+#16 Linux Tips: You can count number of lines in a file with "wc -l <file>"
 
 // Python Tips
 
