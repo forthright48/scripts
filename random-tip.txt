@@ -1,4 +1,4 @@
-// Number of Tips 12
+// Number of Tips 20
 
 // Linux Tips
 
@@ -24,7 +24,7 @@
 
 #11 Linux Tips: You can display one-line manual page descriptions using "whatis <command-name>"
 
-#13 Linux Tips: You can set nicknames to ip address's in /etc/hosts
+#13 Linux Tips: You can set nicknames to ip address's in /etc/hosts like "<ip-address> <nick>". For example, "192.168.0.1 router". Now you can use commands like "ping router".
 
 #14 Linux Tips: Find out list of open ports of an ip using "nmap --open <ip>"
 
@@ -32,6 +32,16 @@
 
 #16 Linux Tips: You can count number of lines in a file with "wc -l <file>"
 
+#18 Linux Tips: User 'du -sh <directory-name>' to view directory size.
+
 // Python Tips
 
-# 12 Python Tips: If you need to run a shell command from python that takes a string input like "<command> <string-parameter>", make sure to use shlex.quote() to safely quote the string parameter and make it shell compatible.
+#12 Python Tips: If you need to run a shell command from python that takes a string input like "<command> <string-parameter>", make sure to use shlex.quote() to safely quote the string parameter and make it shell compatible.
+
+#13 Python Tips: Need to merge many DataFrames? Use pandas.concat([df1,df2,df3])
+
+#14 Python Tips: Upgrade all pip packages: http://stackoverflow.com/questions/2720014/upgrading-all-packages-with-pip
+
+// SSH Tips
+
+#17 SSH Tips: If you ssh with -X flag, ssh -X user@address, then applications with GUI will forward their GUI to host pc.
