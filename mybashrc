@@ -13,6 +13,7 @@ alias firefox="firefox </dev/null >/dev/null 2>&1"
 alias chrome="google-chrome-stable </dev/null >/dev/null 2>&1"
 alias system-update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get autoremove -y"
 alias bashSource="source ~/.bashrc"
+alias gitclean="git rm -r --cached ."
 
 # Frequently visited paths
 . ~/me/bin/fvp
@@ -27,3 +28,5 @@ function set-title(){
 }
 
 random-tip
+
+export CQLSH_NO_BUNDLED=true
