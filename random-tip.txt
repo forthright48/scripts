@@ -1,4 +1,4 @@
-// Number of Tips 20
+// Number of Tips 23
 
 // Linux Tips
 
@@ -45,3 +45,17 @@
 // SSH Tips
 
 #17 SSH Tips: If you ssh with -X flag, ssh -X user@address, then applications with GUI will forward their GUI to host pc.
+
+// Git Tips
+
+#19 Git Tips: 'git status -u' shows contents of new directory added to project
+
+#20 Git Tips: 'git checkout -b <branch-name>' creates a branch and checks out to it.
+
+#21 Git Tips: 'git branch -v' and 'git branch -vv' shows more details for each branch.
+
+// Coding Crafts
+
+#22 Naming Convention: use 'get' as function prefix if it's retrieving a field. For all other case, try using something more precise like: fetch, find, calc, lookup, create and etc.
+
+#23 Naming Convention: avoid using abbreviations, except id.
