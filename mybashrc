@@ -11,7 +11,7 @@ PATH="$PATH:$MY_BIN:$SCALA:$NPM_GLOBAL:$IDEA"
 # Alias
 alias firefox="firefox </dev/null >/dev/null 2>&1"
 alias chrome="google-chrome-stable </dev/null >/dev/null 2>&1"
-alias system-update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get autoremove -y"
+alias system-update="sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y"
 alias bashSource="source ~/.bashrc"
 alias gitclean="git rm -r --cached ."
 
