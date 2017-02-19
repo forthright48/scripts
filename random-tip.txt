@@ -59,3 +59,7 @@
 #22 Naming Convention: use 'get' as function prefix if it's retrieving a field. For all other case, try using something more precise like: fetch, find, calc, lookup, create and etc.
 
 #23 Naming Convention: avoid using abbreviations, except id.
+
+// Vim Tips
+
+#24 Vim Tips: Use "caw" to change-a-word and "daw" to delete a word in vim.

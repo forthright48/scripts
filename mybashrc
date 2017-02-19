@@ -30,3 +30,4 @@ function set-title(){
 random-tip
 
 export CQLSH_NO_BUNDLED=true
+alias cqlsh="~/installs/cassandra/bin/cqlsh"

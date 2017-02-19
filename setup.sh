@@ -46,7 +46,7 @@ apt-get install -y python3-flake8 ipython3-notebook idle3 python3-pip libpng-dev
 su - forthright48 -c "pip3 install --user numpy pandas matplotlib requests"
 
 # 6. Install other useful packages
-apt-get install -y git vim curl geany htop cowsay
+apt-get install -y git vim curl geany htop cowsay kdiff3
 
 # 7. Install NodeJS
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
@@ -75,6 +75,10 @@ echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.li
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
 apt-get update -y
 apt-get install -y sbt
+
+# 11. Git Configure
+git config --global diff.tool kdiff3
+git config --global merge.tool kdiff3
 
 # Before End. Install Java-8
 add-apt-repository ppa:webupd8team/java
