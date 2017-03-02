@@ -1,4 +1,4 @@
-// Number of Tips 23
+// Number of Tips 28 
 
 // Linux Tips
 
@@ -34,6 +34,10 @@
 
 #18 Linux Tips: User 'du -sh <directory-name>' to view directory size.
 
+#25 Linux Tips: You can use 'find <dirname> -type f -name "*.xyz"' to find all files ending with xyz in a dir
+
+#26 Linux Tips: When using piping, A | B, remember that all piping does is pass standard output of A command as standard input of command B. If you want to pass output of A as "argument" of B, then try using A | xargs B.  
+
 // Python Tips
 
 #12 Python Tips: If you need to run a shell command from python that takes a string input like "<command> <string-parameter>", make sure to use shlex.quote() to safely quote the string parameter and make it shell compatible.
@@ -54,6 +58,10 @@
 
 #21 Git Tips: 'git branch -v' and 'git branch -vv' shows more details for each branch.
 
+#27 Git Tips: Want to see today's commits? Try using < git log --since="6am" > or any other time that works for you as morning.
+
+#28 Git Tips: Use 'git remote update', to bring your remote refs up to date. Then 'git status -uno' will tell you whether the branch you are tracking is ahead, behind or has diverged. If it says nothing, the local and remote are the same.
+
 // Coding Crafts
 
 #22 Naming Convention: use 'get' as function prefix if it's retrieving a field. For all other case, try using something more precise like: fetch, find, calc, lookup, create and etc.
@@ -63,3 +71,4 @@
 // Vim Tips
 
 #24 Vim Tips: Use "caw" to change-a-word and "daw" to delete a word in vim.
+
