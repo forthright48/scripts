@@ -14,6 +14,7 @@ alias chrome="google-chrome-stable </dev/null >/dev/null 2>&1"
 alias system-update="sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y"
 alias bashSource="source ~/.bashrc"
 alias gitclean="git rm -r --cached ."
+alias gitlog="git log --graph --oneline --all --decorate"
 
 # Frequently visited paths
 . ~/me/bin/fvp

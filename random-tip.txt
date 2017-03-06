@@ -1,4 +1,4 @@
-// Number of Tips 28 
+// Number of Tips 29 
 
 // Linux Tips
 
@@ -61,6 +61,8 @@
 #27 Git Tips: Want to see today's commits? Try using < git log --since="6am" > or any other time that works for you as morning.
 
 #28 Git Tips: Use 'git remote update', to bring your remote refs up to date. Then 'git status -uno' will tell you whether the branch you are tracking is ahead, behind or has diverged. If it says nothing, the local and remote are the same.
+
+#29 Git Tips: Use 'git branch -u <remote>/<branch>' to set current branch to track remote branch.
 
 // Coding Crafts
 
