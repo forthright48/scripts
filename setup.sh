@@ -7,16 +7,17 @@
 cd ~
 
 # 1. First update and upgrade
-apt-get update -y
-apt-get upgrade -y
+apt update -y
+apt upgrade -y
 
 # 2. Install Chrome
+mkdir tmp
 cd ~/tmp
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 dpkg -i google-chrome*.deb
-apt-get install -yf # For dependencies
+apt install -yf # For dependencies
 dpkg -i google-chrome*.deb # Try again
-apt-get install -yf # Just in case
+apt install -yf # Just in case
 cd ~
 
 # 3. Bangla Fonts
@@ -27,31 +28,26 @@ fc-cache -f -v
 cd ~
 
 # 4. Install Atom
-add-apt-repository ppa:webupd8team/atom
-apt-get update -y
-apt-get install atom -y
+add-apt-repository -y ppa:webupd8team/atom
+apt update -y
+apt install atom -y
 # since the script is running in sudo, need to change it back to user
 chown -R forthright48:forthright48 .atom
 
 # Now install all required packages
 apm install -y atom-beautify highlight-selected linter linter-csslint linter-eslint linter-flake8 markdown-preview-plus minimap pigments todo-show linter-pug filesize language-scala
 
-# 5. Install Java-8
-add-apt-repository ppa:webupd8team/java
-apt-get update -y
-apt-get install oracle-java8-set-default -y
-
 # 5. Python
-apt-get install -y python3-flake8 ipython3-notebook idle3 python3-pip libpng-dev libfreetype6-dev
+apt install -y python3-flake8 ipython3-notebook idle3 python3-pip libpng-dev libfreetype6-dev
 su - forthright48 -c "pip3 install --user numpy pandas matplotlib requests"
 
 # 6. Install other useful packages
-apt-get install -y git vim curl geany htop cowsay kdiff3
+apt install -y git vim curl geany htop cowsay kdiff3
 
 # 7. Install NodeJS
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-apt-get update -y
-apt-get install -y nodejs
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+apt update -y
+apt install -y nodejs
 
 # Fix npm permission
 su - forthright48 -c "mkdir ~/.npm-global"
@@ -62,19 +58,19 @@ su - forthright48 -c "npm install npm@latest -g"
 su - forthright48 -c "npm install -g nodemon gulpjs/gulp-cli"
 
 # 8. Install restricted extras (for mp3 and stuff)
-apt-get install -y ubuntu-restricted-extras
+apt install -y ubuntu-restricted-extras
 
 # 9. Installing ibus-avro on Ubuntu 14.04
-add-apt-repository "deb http://download.opensuse.org/repositories/home:/sarimkhan/xUbuntu_14.04/ ./"
+add-apt-repository -y "deb http://download.opensuse.org/repositories/home:/sarimkhan/xUbuntu_14.04/ ./"
 wget -q http://download.opensuse.org/repositories/home:/sarimkhan/xUbuntu_14.04/Release.key -O- | apt-key add -
-apt-get update -y
-apt-get install -y ibus-avro-trusty
+apt update -y
+apt install -y ibus-avro-trusty
 
 # 10. Install sbt
 echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
-apt-get update -y
-apt-get install -y sbt
+apt update -y
+apt install -y sbt
 
 # 11. Git Configure
 git config --global diff.tool kdiff3
@@ -82,8 +78,8 @@ git config --global merge.tool kdiff3
 
 # Before End. Install Java-8
 add-apt-repository ppa:webupd8team/java
-apt-get update -y
-apt-get install oracle-java8-set-default -y
+apt update -y
+apt install oracle-java8-set-default -y
 
 # Last Step
-apt-get autoremove
+apt autoremove
