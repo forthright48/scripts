@@ -26,6 +26,7 @@ cd .fonts
 wget files.ekushey.org/Ekushey_OpenType_Bangla_Fonts/SolaimanLipi_Bold_10-03-12.ttf
 fc-cache -f -v
 cd ~
+chown -R forthright48:forthright48 ./.fonts
 
 # 4. Install Atom
 add-apt-repository -y ppa:webupd8team/atom
@@ -38,11 +39,14 @@ chown -R forthright48:forthright48 .atom
 apm install -y atom-beautify highlight-selected linter linter-csslint linter-eslint linter-flake8 markdown-preview-plus minimap pigments todo-show linter-pug filesize language-scala
 
 # 5. Python
-apt install -y python3-flake8 ipython3-notebook idle3 python3-pip libpng-dev libfreetype6-dev
+apt install -y python3-flake8 ipython3-notebook idle3 python3-pip libpng-dev libfreetype6-dev flake8
 su - forthright48 -c "pip3 install --user numpy pandas matplotlib requests"
 
 # 6. Install other useful packages
-apt install -y git vim curl geany htop cowsay kdiff3
+apt install -y git vim curl geany htop cowsay kdiff3 mongodb-server
+
+# Stop mongodb from running on startup
+update-rc.d mongodb disable
 
 # 7. Install NodeJS
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
@@ -73,8 +77,11 @@ apt update -y
 apt install -y sbt
 
 # 11. Git Configure
+git config --global user.email "forthright48@gmail.com"
+git config --global user.name "Mohammad Samiul Islam"
 git config --global diff.tool kdiff3
 git config --global merge.tool kdiff3
+git config --global core.editor "vim"
 
 # Before End. Install Java-8
 add-apt-repository ppa:webupd8team/java
