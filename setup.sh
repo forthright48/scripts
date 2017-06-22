@@ -49,7 +49,7 @@ apt install -y git vim curl geany htop cowsay kdiff3 mongodb-server
 update-rc.d mongodb disable
 
 # 7. Install NodeJS
-curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 apt update -y
 apt install -y nodejs
 
