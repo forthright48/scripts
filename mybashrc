@@ -2,22 +2,17 @@
 
 # Add path
 MY_BIN="$HOME/me/bin"
-SCALA="/home/forthright48/me/scala/bin"
 NPM_GLOBAL="/home/forthright48/.npm-global/bin"
-IDEA="/home/forthright48/me/idea/bin"
 
-PATH="$PATH:$MY_BIN:$SCALA:$NPM_GLOBAL:$IDEA"
+PATH="$PATH:$MY_BIN:$NPM_GLOBAL"
 
 # Alias
-alias firefox="firefox </dev/null >/dev/null 2>&1"
 alias chrome="google-chrome-stable </dev/null >/dev/null 2>&1"
 alias system-update="sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y"
 alias bashSource="source ~/.bashrc"
+
 alias gitclean="git rm -r --cached ."
 alias gitlog="git log --graph --oneline --all --decorate"
-
-# Frequently visited paths
-. ~/me/bin/fvp
 
 # function to set terminal title
 function set-title(){
@@ -27,8 +22,3 @@ function set-title(){
   TITLE="\[\e]2;$*\a\]"
   PS1=${ORIG}${TITLE}
 }
-
-random-tip
-
-export CQLSH_NO_BUNDLED=true
-alias cqlsh="~/installs/cassandra/bin/cqlsh"
