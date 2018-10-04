@@ -3,13 +3,17 @@
 # Add path
 MY_BIN="$HOME/me/bin"
 NPM_GLOBAL="/home/forthright48/.npm-global/bin"
+export GOBIN="$HOME/go/bin"
+export GOPATH="$HOME/go"
 
-PATH="$PATH:$MY_BIN:$NPM_GLOBAL"
+PATH="$PATH:$MY_BIN:$NPM_GLOBAL:$GOBIN"
 
 # Alias
 alias chrome="google-chrome-stable </dev/null >/dev/null 2>&1"
 alias system-update="sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y"
 alias bashSource="source ~/.bashrc"
+alias sourceZsh="source ~/.zshrc"
+alias myg++="g++ -std=c++11 -D forthright48"
 
 alias gitclean="git rm -r --cached ."
 alias gitlog="git log --graph --oneline --all --decorate"
@@ -22,3 +26,5 @@ function set-title(){
   TITLE="\[\e]2;$*\a\]"
   PS1=${ORIG}${TITLE}
 }
+
+unsetopt share_history
