@@ -36,7 +36,7 @@ apt install atom -y
 chown -R forthright48:forthright48 .atom
 
 # Now install all required packages
-apm install -y atom-beautify highlight-selected linter linter-csslint linter-eslint linter-flake8 markdown-preview-plus minimap pigments todo-show linter-pug filesize language-scala
+apm install -y atom-beautify highlight-selected linter linter-csslint linter-eslint linter-flake8 markdown-preview-enhanced minimap todo-show linter-pug docblockr
 
 # 5. Python
 apt install -y python3-flake8 ipython3-notebook idle3 python3-pip libpng-dev libfreetype6-dev flake8
@@ -61,8 +61,9 @@ su - forthright48 -c "npm config set prefix '~/.npm-global'"  #Don't forget to u
 su - forthright48 -c "npm install npm@latest -g"
 su - forthright48 -c "npm install -g nodemon gulpjs/gulp-cli"
 
-# 8. Install restricted extras (for mp3 and stuff)
-apt install -y ubuntu-restricted-extras
+# 8. Install proprietary softwares
+apt install -y ubuntu-restricted-extras # for mp3 and stuff
+apt install -y exfat-fuse exfat-utils # to mount exfat file system
 
 # 9. Installing ibus-avro on Ubuntu 14.04
 # add-apt-repository -y "deb http://download.opensuse.org/repositories/home:/sarimkhan/xUbuntu_14.04/ ./"
@@ -78,6 +79,7 @@ git config --global merge.tool kdiff3
 git config --global core.editor "vim"
 
 # 12. Install docker
+apt install apt-transport-https ca-certificates software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 apt update
@@ -91,5 +93,4 @@ apt install oracle-java8-set-default -y
 
 # Last Step
 apt autoremove
-apt-get install apt-transport-https ca-certificates curl software-properties-common
 
