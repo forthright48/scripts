@@ -33,7 +33,12 @@ function set-title(){
   PS1=${ORIG}${TITLE}
 }
 
+# zsh options
 unsetopt share_history
+stty start undef
+stty stop undef
+setopt noflowcontrol
+
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/me/projects/python
