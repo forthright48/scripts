@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# A script to kill any process that is using a certain port number
+
 if [ $# -eq 0 ]; then
   echo "Must enter a port number"
   exit

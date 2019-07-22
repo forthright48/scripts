@@ -13,13 +13,15 @@ alias chrome="google-chrome-stable </dev/null >/dev/null 2>&1"
 alias system-update="sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y"
 alias bashSource="source ~/.bashrc"
 
-
 alias mongostart="mongod --dbpath \"/home/forthright48/.mongod/data/db\""
 alias myg++="g++ -std=c++11 -D forthright48"
 
 # git
 alias gitclean="git rm -r --cached ."
 alias gitlog="git log --graph --oneline --all --decorate"
+alias gitlog="git log --graph --oneline --all --decorate"
+alias gitdiff="git difftool --dir-diff -t kompare"
+alias gitshow="git difftool --dir-diff -t kompare HEAD^ HEAD"
 
 # docker
 alias docker_dangling="docker images -f \"dangling=true\" -q"
@@ -34,13 +36,17 @@ function set-title(){
 }
 
 # zsh options
-unsetopt share_history
-stty start undef
-stty stop undef
-setopt noflowcontrol
+# unsetopt share_history
+# stty start undef
+# stty stop undef
+# setopt noflowcontrol
 
-
+# Virtual Env
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/me/projects/python
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source $HOME/.local/bin/virtualenvwrapper.sh
+
+if [[ -a ${MY_BIN}/office/mybash.sh ]]; then
+    source ${MY_BIN}/office/mybash.sh
+fi
